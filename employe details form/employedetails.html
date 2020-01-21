@@ -1,0 +1,59 @@
+<html>
+<style>
+#email{
+color:blue;}
+font-size:18px;
+</style>
+
+<body>
+<center>
+<h1>Employe Details </h1><hr/>
+
+<script>
+  function validate()
+  {
+var bs=document.getElementById("bs").value;
+var ta=document.getElementById("ta").value;
+var da=document.getElementById("da").value;
+var deduc=document.getElementById("deduc").value;
+var pf=parseInt(bs)/20;
+document.getElementById("pf").value=pf;
+var gt=parseInt(bs)+parseInt(ta)+parseInt(da)-parseInt(deduc)-parseInt(pf);
+document.getElementById("gt").value=gt;
+}
+</script>
+<pre>
+
+    <form name="myform" action="Register" method="post" onSubmit="return validate()">
+
+  Email   <input type="text" id="email" name="email" />
+
+	Name <input type="name" id="pwd" name="name" />
+
+  basic salary <input type="number" id="bs" name="number" />
+
+  TA <input type="number" id="ta" name="number" />
+
+  DA <input type="number" id="da" name="number" />
+
+  deduction <input type="number" id="deduc" name="number" onkeyup="validate()" />
+
+  PF <input type="number" id="pf" name="number"  />
+
+
+  grand total <input type="number" id="gt" name="number" />
+	  
+	</form>
+
+</pre>
+
+
+
+</center>
+
+
+</body>
+
+
+
+</html>

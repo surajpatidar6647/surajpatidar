@@ -1,0 +1,65 @@
+<html>
+<style>
+#errormsg{
+color:blue;
+font-size:18px;
+</style>
+
+<body>
+<center>
+<h1>Singup Form</h1><hr/>
+
+<script>
+function validate()
+{
+var email=document.myform.email.value;
+var pwd=document.myform.pwd.value;
+
+
+
+if(email!="admin@gmail.com")
+{
+   document.getElementById('errormsg').innerHTML="Please Enter valid EmailID";
+   document.myform.email.focus();
+   return false; 
+}
+
+if (pwd!="admin123")
+{
+   document.getElementById('errormsg').innerHTML="Please Enter Password";
+   document.myform.pwd.focus();
+   return false; 
+}
+else 
+	alert('login successful')
+
+return true;
+}
+</script>
+
+<pre>
+        <div id="errormsg"></div>
+
+    <form name="myform" action="Register" method="post" onSubmit="return validate()">
+
+    Email   <input type="text" id="email" name="email" />
+
+	Password <input type="password" id="pwd" name="pwd" />
+	
+	<input type="submit" value="Submit" />
+	<input type="reset"  />
+	  
+	</form>
+
+</pre>
+
+
+
+</center>
+
+
+</body>
+
+
+
+</html>

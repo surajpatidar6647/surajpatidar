@@ -1,0 +1,63 @@
+<html>
+<script>
+// ready function called on page loading 
+$(document).ready(function{
+$("#did").hide(); $("mid").hide(); $("#sid").hide();
+$("#des").change(function(){
+	var desig=$("#des").val();
+	if (desig=="developer")
+	{
+		$ ("#did").show(); $("#mid").hide(); $("#sid").hide();
+	}
+else if (desig=="manager")
+{
+		$ ("#did").show(); $("#mid").hide(); $("#sid").hide();
+}
+else if (desig=="support")
+{
+			$ ("#did").show(); $("#mid").hide(); $("#sid").hide();
+}
+else
+{
+			$ ("#did").show(); $("#mid").hide(); $("#sid").hide();
+
+}
+
+}
+
+});
+</script>
+<body>
+	
+	<center>
+		<table border="0">
+			<tr>
+				<td>designation </td><td><select id="des">
+					<option>-select-</option>
+					<option>developer</option>
+					<option>manager</option>
+					<option>support</option>
+					
+				</select>
+			</td>
+			</tr>
+			<tr id="did"> <td>developerID:</td><td><input type="text" /></td></tr>
+			<tr id="mid"> <td>managerID:</td><td><input type="text" /></td></tr>
+			<tr id="sid"> <td>supportID:</td><td><input type="text" id="did" /></td></tr>
+
+
+		</table>
+	</center>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
